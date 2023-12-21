@@ -33,7 +33,7 @@ class AddProductActivity : AppCompatActivity() {
     fun observerAll() {
         viewModel.newProductCallback.observe(this) {
             val intent = Intent()
-            val product = Product(10, "elma", "kırmızı elma")
+            val product = viewModel.createNewProduct()
             intent.putExtra("product", product)
 
 
